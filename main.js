@@ -58,23 +58,27 @@ document.querySelector("article").appendChild(committees);
 //create a section element that contains the links to the representatives sponsored legislation and gives it an appropriate id
 let links = document.createElement("section");
 links.id = "candidate__links";
-links.innerHTML = '<a href="https://www.govtrack.us/congress/bills/browse?sponsor=412477">Link to Sponsored Legislation</a>'
+
+let link_1 = document.createElement("a");
+link_1.setAttribute("href", "https://www.govtrack.us/congress/bills/browse?sponsor=412477");
+link_1.setAttribute("target", "_blank")
+link_1.textContent= "Link to all Sponsored Legislation"
 console.log(links)
-articleContent.innerHTML += "links"
-
-console.log(articleContent);
-
+document.querySelector("article").appendChild(link_1);
 document.querySelector("article").appendChild(links)
 
-
-document.querySelector("article").innerHTML += "<h3>Mission statement: I strive to keep horses safe!</h3>";
+//add the fake slogan
+let slogan = document.createElement("h2")
+slogan.textContent = "Mission statement: I strive to keep horses safe. Help me help horses.";
+document.querySelector("article").appendChild(slogan)
 
 console.log(document.querySelector("article"))
 
+//add a custom attribute to the candidate__info section
 let info = document.querySelector("#candidate__info");
 let att = document.createAttribute("congressional-district");
-
 att.value = "congressional_district_4";
-
 info.setAttributeNode(att);
- console.log(document.querySelector("#candidate__info"))
+
+//console.log the newly changed section to check if it worked correctly
+console.log(document.querySelector("#candidate__info"))
