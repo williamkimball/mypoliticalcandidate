@@ -62,12 +62,40 @@ document.querySelector("article").appendChild(candidate__committee__list);
 let links = document.createElement("section");
 links.id = "candidate__links";
 
+//create a title for the unordered list of sponsored bills
+let link_title = document.createElement("h2")
+link_title.textContent = "Bills Scott DesJarlais has Sponsored";
+links.appendChild(link_title);
+
+//create an unordered list
+let links_list = document.createElement("ul")
+//create the list items containing the links to sponsored bills
+let links_list_item_1 = document.createElement("li")
 let link_1 = document.createElement("a");
 link_1.setAttribute("href", "https://www.govtrack.us/congress/bills/browse?sponsor=412477");
 link_1.setAttribute("target", "_blank")
 link_1.textContent= "Link to all Sponsored Legislation"
-console.log(links)
-document.querySelector("article").appendChild(link_1);
+links_list_item_1.appendChild(link_1)
+links_list.appendChild(links_list_item_1)
+
+let links_list_item_2 = document.createElement("li")
+let link_2 = document.createElement("a");
+link_2.setAttribute("href", "https://www.govtrack.us/congress/bills/115/hr1338");
+link_2.setAttribute("target", "_blank")
+link_2.textContent= "Horse Bill"
+links_list_item_2.appendChild(link_2)
+links_list.appendChild(links_list_item_2)
+
+let links_list_item_3 = document.createElement("li")
+let link_3 = document.createElement("a");
+link_3.setAttribute("href", "https://www.govtrack.us/congress/bills/115/hr500");
+link_3.setAttribute("target", "_blank")
+link_3.textContent= "Tax Bill"
+links_list_item_3.appendChild(link_3)
+links_list.appendChild(links_list_item_3)
+
+//append the links to the ul, then to the article as a whole
+links.appendChild(links_list);
 document.querySelector("article").appendChild(links)
 
 //add the fake slogan
