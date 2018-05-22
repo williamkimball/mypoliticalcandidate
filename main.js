@@ -35,7 +35,7 @@ committees.id = "candidate__committiees";
 
 //create an h2 element with the candidate's name and append it to the candidate section
 let candidate__committee = document.createElement("h2")
-candidate__committee.textContent = "Committees Scott DesJarlais is on";
+candidate__committee.textContent = "Committees Scott DesJarlais serves on";
 basicInfo.appendChild(candidate__committee);
 
 //create an h3 element to contain each of the committees the representative is on.
