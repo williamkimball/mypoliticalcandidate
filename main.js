@@ -38,22 +38,25 @@ let candidate__committee = document.createElement("h2")
 candidate__committee.textContent = "Committees Scott DesJarlais serves on";
 basicInfo.appendChild(candidate__committee);
 
-//create an h3 element to contain each of the committees the representative is on.
+//create a ul to contain the following commitees
+let candidate__committee__list = document.createElement("ul")
 
-let candidate__committee__1 = document.createElement("h3")
+//create an li elements to contain each of the committees the representative is on.
+
+let candidate__committee__1 = document.createElement("li")
 candidate__committee__1.textContent = "House Committee on Agriculture";
-committees.appendChild(candidate__committee__1);
+candidate__committee__list.appendChild(candidate__committee__1);
 
-let candidate__committee__2 = document.createElement("h3")
+let candidate__committee__2 = document.createElement("li")
 candidate__committee__2.textContent = "House Committee on Armed Services";
-committees.appendChild(candidate__committee__2);
+candidate__committee__list.appendChild(candidate__committee__2);
 
-let candidate__committee__3 = document.createElement("h3")
+let candidate__committee__3 = document.createElement("li")
 candidate__committee__3.textContent = "House Committee on Oversight and Government Reform";
-committees.appendChild(candidate__committee__3);
+candidate__committee__list.appendChild(candidate__committee__3);
 
 //append the completed committees section to the DOM
-document.querySelector("article").appendChild(committees);
+document.querySelector("article").appendChild(candidate__committee__list);
 
 //create a section element that contains the links to the representatives sponsored legislation and gives it an appropriate id
 let links = document.createElement("section");
